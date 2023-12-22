@@ -13,6 +13,7 @@ import { ExperienceComponent } from './components/main/experience/experience.com
 import { ProjectsComponent } from './components/main/projects/projects.component';
 import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './components/main/skills/skills.component';
+import { ContactComponent } from './components/main/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { SkillsComponent } from './components/main/skills/skills.component';
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
