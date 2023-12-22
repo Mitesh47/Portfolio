@@ -10,6 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BasicInfoComponent } from './components/main/basic-info/basic-info.component';
 import { AboutMeComponent } from './components/main/about-me/about-me.component';
 import { ExperienceComponent } from './components/main/experience/experience.component';
+import { ProjectsComponent } from './components/main/projects/projects.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,15 +21,18 @@ import { ExperienceComponent } from './components/main/experience/experience.com
     FooterComponent,
     BasicInfoComponent,
     AboutMeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ProjectsComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

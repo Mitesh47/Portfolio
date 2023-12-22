@@ -1,0 +1,87 @@
+<section class="section proyects" id="projects">
+  <div class="container">
+    <div class="section-box">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="section-title">
+          <span class="n-section-title">03.</span>
+          {{ Title }}
+        </h3>
+      </div>
+
+      <div
+        *ngFor="let project of ProjectList; let i = index"
+        class="d-flex proyect-container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <ng-container>
+          <owl-carousel-o class="owl-carousel-o" [options]="customOptions">
+            <ng-container *ngFor="let img of project.imgs">
+              <ng-template carouselSlide [id]="project.Title + img + i">
+                <div #imgContainer class="img-container">
+                  <img
+                    class="img-feature-proyect rounded"
+                    [src]="img"
+                    [alt]="project.Title"
+                  />
+                  <img
+                    [src]="img"
+                    *ngFor="let img of project.imgs"
+                    data-gallery="myGal"
+                    class="img-feature-proyect rounded"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </ng-container>
+        <div
+          class="img-feature-proyect-container"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div class="img-feature-proyect-box">
+            <div class="img-container" style="width: auto">
+              <img
+                class="img-feature-proyect rounded"
+                [src]="project.imgs[0]"
+                [alt]="project.imgs[0]"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="h-100 info-right"
+          style="background-image: url('{{ project.imgs }}');"
+        >
+          <div class="proyect-box">
+            <h4 class="proyect-name text-right">
+              {{ project.Title }}
+            </h4>
+
+            <div class="proyect-description-box" (click)="debug()">
+              <p class="mb-0" [innerHTML]="project.Description"></p>
+            </div>
+            <ul class="proyect-skills justify-content-end">
+              <li *ngFor="let technology of project.Technologies" class="ml-3">
+                <span class="underline technology">{{ technology }}</span>
+              </li>
+            </ul>
+            <div class="proyect-links text-right">
+              <a
+                *ngIf="project['ghLink']"
+                style="color: inherit"
+                [href]="project['ghLink']"
+                target="_blank"
+                ><i class="ml-3 fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
