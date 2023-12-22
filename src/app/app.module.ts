@@ -11,8 +11,8 @@ import { BasicInfoComponent } from './components/main/basic-info/basic-info.comp
 import { AboutMeComponent } from './components/main/about-me/about-me.component';
 import { ExperienceComponent } from './components/main/experience/experience.component';
 import { ProjectsComponent } from './components/main/projects/projects.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
+import { SkillsComponent } from './components/main/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +23,7 @@ import { CommonModule } from '@angular/common';
     AboutMeComponent,
     ExperienceComponent,
     ProjectsComponent,
+    SkillsComponent,
   ],
   imports: [
     CommonModule,
@@ -30,7 +31,6 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

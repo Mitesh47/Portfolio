@@ -3,12 +3,6 @@
     .proyect-container {
         height: 360px;
         margin: 100px 0;
-        .proyect-info-right {
-            width: 50%;
-            margin-left: -57px;
-            margin-right: 0px;
-            display: table;
-        }
         .proyect-box {
             // display: table-cell;
             // vertical-align: middle;
@@ -73,9 +67,6 @@
 // }
 
 @media (min-width: 768px) and (max-width: 1400px) {
-    .owl-carousel-o{
-        display: none;
-    }
     .img-feature-proyect-container {
         width: 50%;
         height: 100%;
@@ -89,27 +80,13 @@
     }
 }
 
-@media (min-width: 768px) {
-
-    .proyect-info-right,
-    .proyect-info-left {
-        background-image: none !important;
-    }
-}
-
 @media (max-width: 768px) {
-    .owl-carousel-o{
-        display: none;
-    }
     .proyects {
         .proyect-container {
             height: 100% !important;
             margin: 33px 0 !important;
-            .proyect-info-right {
-                width: 100%;
-            }
             .proyect-description-box {
-                padding: 0px !important;
+                padding: 5px !important;
                 box-shadow: none !important;
                 position: relative;
                 z-index: 2;
@@ -119,42 +96,12 @@
                 font-size: 18px;
                 border-radius: 3px;
             }
-            .proyect-info-right,
-            .proyect-info-left {
-                display: block !important;
-                margin: 0px !important;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 3px;
-                .proyect-box {
-                    display: block;
-                }
-            }
-            .img-feature-proyect-container {
-                display: none;
-            }
-        }
-        .proyect-info-right,
-        .proyect-info-left {
-            padding: 0px;
-        }
-        .text-right,
-        .text-left {
-            text-align: center !important;
         }
         .justify-content-end {
             justify-content: center !important;
         }
         .justify-content-start {
             justify-content: center !important;
-        }
-
-
-        .proyect-info-right .proyect-box,
-        .proyect-info-left .proyect-box {
-            padding: 20px;
-            background: #0a192fe3;
         }
     }
 }
@@ -169,12 +116,16 @@
 }
 
 .img-container {
-    width: 300px;
-    max-height: 100%;
-    overflow: auto;
-    margin-top: 3rem;
-    margin-right: 10px;
+    width: 600px;
+    overflow: hidden;
+    margin-right: 3rem;
     border-radius: 3px;
+
+    img{
+      border-radius: 20px;
+      height: 100%;
+      width: 100%;
+    }
 }
 
 

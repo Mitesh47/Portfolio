@@ -1,0 +1,21 @@
+<section class="section proyects" id="skills">
+  <div class="container">
+    <div class="section-box">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="section-title">
+          <span class="n-section-title">03.</span>
+          {{ Title }}
+        </h3>
+      </div>
+    </div>
+    <div
+      class="skills-section d-flex flex-row justify-content-between flex-wrap gap-2"
+    >
+      <div class="skill" *ngFor="let skill of SkillsList; let i = index">
+        <img [src]="skill.icon" [alt]="'icon' + (i + 1)" />
+        <div class="percentage-badge">{{ skill.percentage }}</div>
+      </div>
+      <!-- Add more skills as needed -->
+    </div>
+  </div>
+</section>
