@@ -38,7 +38,7 @@ export class BasicInfoComponent implements OnInit {
 
   typedInit() {
     const options = {
-      strings: ['Angular Developer', 'NodeJs Developer'],
+      strings: ['Angular Developer', 'NodeJs Developer', 'NestJs Developer'],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
