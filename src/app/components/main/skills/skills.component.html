@@ -11,7 +11,12 @@
     <div
       class="skills-section d-flex flex-row justify-content-between flex-wrap gap-2"
     >
-      <div class="skill" *ngFor="let skill of SkillsList; let i = index">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        class="skill"
+        *ngFor="let skill of SkillsList; let i = index"
+      >
         <img [src]="skill.icon" [alt]="'icon' + (i + 1)" />
         <div class="percentage-badge">{{ skill.percentage }}</div>
       </div>
