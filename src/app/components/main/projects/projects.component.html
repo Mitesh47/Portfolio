@@ -10,83 +10,83 @@
 
       <div
         *ngFor="let project of ProjectList; let i = index"
-        class="d-flex proyect-container"
+        class="d-flex project-container"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <div class="img-container d-none d-md-block">
-          <div
-            id="carouselExampleDark"
-            class="carousel carousel-dark slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner">
-              <div
-                class="carousel-item active"
-                *ngFor="
-                  let img of project.imgs;
-                  let i = index;
-                  let isFirst = first
-                "
-                [class.active]="isFirst"
-              >
-                <img
-                  [src]="img"
-                  class="d-block w-100"
-                  [alt]="'img' + (i + 1)"
-                  (click)="openImageInNewTab('../../../../' + img)"
-                />
+        <div class="projects-box">
+          <div class="img-container">
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div
+                  class="carousel-item"
+                  *ngFor="let img of project.imgs; let isFirst = first"
+                  [class.active]="isFirst"
+                >
+                  <img
+                    [src]="img"
+                    class="d-block w-100"
+                    [alt]="img"
+                    (click)="openImageInNewTab('../../../../' + img)"
+                  />
+                </div>
               </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="prev"
-              style="color: black"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleDark"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
-        </div>
-        <div class="h-100">
-          <div class="proyect-box">
-            <h4 class="proyect-name">
-              {{ project.Title }}
-            </h4>
-
-            <div class="proyect-description-box" (click)="debug()">
-              <p class="mb-0" [innerHTML]="project.Description"></p>
-            </div>
-            <ul class="proyect-skills justify-content-end">
-              <li *ngFor="let technology of project.Technologies" class="ml-3">
-                <span class="underline technology">{{ technology }}</span>
-              </li>
-            </ul>
-            <div class="proyect-links">
-              <a
-                *ngIf="project['ghLink']"
-                style="color: inherit"
-                [href]="project['ghLink']"
-                target="_blank"
-                ><i class="ml-3 fab fa-github"></i
-              ></a>
+          <div class="project-details">
+            <div class="project-box">
+              <h4 class="project-name">{{ project.Title }}</h4>
+              <div class="project-description-box" (click)="debug()">
+                <p [innerHTML]="project.Description"></p>
+              </div>
+              <ul class="project-skills">
+                <div>
+                  <a
+                    *ngIf="project['ghLink']"
+                    style="color: inherit"
+                    [href]="project['ghLink']"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+                <div class="d-flex">
+                  <li
+                    class="list-unstyled"
+                    *ngFor="let technology of project.Technologies"
+                  >
+                    <span class="underline technology">{{ technology }}</span>
+                  </li>
+                </div>
+              </ul>
             </div>
           </div>
         </div>

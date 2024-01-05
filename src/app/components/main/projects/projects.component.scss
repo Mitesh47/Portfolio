@@ -1,163 +1,95 @@
 @import "./../../../../styles/variable.scss";
+
 .proyects {
-    .proyect-container {
-        height: 360px;
-        margin: 100px 0;
-        .proyect-box {
-            display: table-cell;
-            vertical-align: middle;
-            .proyect-name {
-                font-size: 28px;
-                margin: 0 0 20px;
-                color: $LightestSlate;
-                // margin-left: 100px;
-            }
-            .proyect-description-box {
-                box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-                -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-                transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-                position: relative;
-                z-index: 2;
-                padding: 25px;
-                color: $LightSlate;
-                font-size: 18px;
-                border-radius: 10px;
-                border: 1px solid $Orange;
-            }
-            .proyect-skills {
-                position: relative;
-                z-index: 2;
-                display: -webkit-box;
-                display: -webkit-flex;
-                display: -ms-flexbox;
-                display: flex;
-                -webkit-flex-wrap: wrap;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                padding: 0;
-                margin: 25px 0 10px;
-                list-style: none;
-                li {
-                    margin-right: 10px;
-                    font-family: $font-family-primary;
-                    font-size: 13px;
-                    color: $Slate;
-                    margin-bottom: 7px;
-                    white-space: nowrap;
-                    .technology{
-                      padding-bottom: 5px;
-                    }
-                }
-            }
-            .proyect-links {
-                margin-top: 10px;
-                i {
-                    font-size: 22px;
-                }
-            }
+    .project-container {
+      border: 1px solid $Orange;
+      border-radius: 1rem;
+      margin-top: 100px;
+      margin-bottom: 30px;
+      padding: 10px;
+
+      .projects-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1000px) {
+          width: 100%;
+          display: contents;
         }
     }
-}
-
-// .owl-carousel-o{
-//     width: 600px;
-// }
-// .img-feature-proyect-container {
-//     display:  none;
-// }
-
-@media (min-width: 768px) and (max-width: 1400px) {
-    .img-feature-proyect-container {
-        width: 50%;
-        height: 100%;
-        .img-feature-proyect-box {
-            display: table-cell;
-            vertical-align: middle;
-        }
-        .img-feature-proyect {
-            width: 100%;
-        }
-    }
-    .img-container{
-      margin-top: 55px;
-    }
-}
-
-@media (max-width: 768px) {
-    .proyects {
-        .proyect-container {
-            height: 100% !important;
-            margin: 33px 0 !important;
-            margin-top: 75px;
-            .proyect-description-box {
-                padding: 5px !important;
-                box-shadow: none !important;
-                position: relative;
-                z-index: 2;
-                padding: 25px;
-                background-color: transparent !important;
-                color: $LightSlate;
-                font-size: 18px;
-                border-radius: 3px;
-            }
-        }
-        .justify-content-end {
-            justify-content: center !important;
-        }
-        .justify-content-start {
-            justify-content: center !important;
-        }
-    }
-}
-
-::ng-deep .owl-theme .owl-dots .owl-dot.active span,
- ::ng-deep .owl-theme .owl-dots .owl-dot:hover span {
-    background-color: white !important;
-}
-
-::ng-deep .owl-theme .owl-dots .owl-dot span {
-    background: #ffffff33;
-}
 
 .img-container {
-    width: 600px;
-    overflow: hidden;
-    margin-right: 3rem;
-    border-radius: 3px;
+  width: 40%;
 
-    img{
-      border-radius: 20px;
-      height: 100%;
-      width: 100%;
+  @media (max-width: 1000px) {
+    display: none;
+    width: 100%;
+  }
+}
+
+.carousel {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.project-details {
+  width: 60%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  @media (max-width: 1000px) {
+          width: 100%;
+        }
+
+
+  // &:hover {
+  //   transform: scale(1.05);
+  // }
+
+  .project-box {
+    h4 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
     }
+
+    .project-description-box {
+      cursor: pointer;
+      p {
+        font-size: 1em;
+        color: #555;
+        margin: 0;
+      }
+    }
+
+    .project-skills {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+
+      @media (max-width: 1000px) {
+          width: 100%;
+          display: contents;
+        }
+
+      a {
+        font-size: 1.5em;
+        margin-right: 10px;
+      }
+
+      .technology {
+        font-size: 0.9em;
+        margin-right: 10px;
+      }
+    }
+  }
 }
-
-
-/* width */
-
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-
-/* Track */
-
- ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #8892b0;
-    border-radius: 3px;
-}
-
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
-    background: $Orange;
-    border-radius: 3px;
-}
-
-
-/* Handle on hover */
-
- ::-webkit-scrollbar-thumb:hover {
-    background: $Orange;
+    }
 }

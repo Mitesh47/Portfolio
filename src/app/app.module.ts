@@ -14,7 +14,6 @@ import { ProjectsComponent } from './components/main/projects/projects.component
 import { CommonModule } from '@angular/common';
 import { SkillsComponent } from './components/main/skills/skills.component';
 import { ContactComponent } from './components/main/contact/contact.component';
-import { ColorSwitcherComponent } from './components/main/color-switcher/color-switcher.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { ColorSwitcherComponent } from './components/main/color-switcher/color-s
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
-    ColorSwitcherComponent,
   ],
   imports: [
     CommonModule,
