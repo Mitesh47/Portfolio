@@ -17,11 +17,11 @@ export class ExperienceComponent implements OnInit {
       Title: 'Fullstack developer',
       Date: 'March 2022 - Present',
       Description: [
-        'Developing single page application (SPA) using Angular, Responsive and user-friendly web design using HTML5, CSS3, Bootstrap, Material UI, and Web APIs integration.',
-        'Fixing bugs in existing software and improved functionality.',
-        'Implementation of API integration with backend technologies.',
-        'Working with team members, Designing and developing the complete software architecture. ',
-        'Working with database and creating Store Procedure, Views and Table Design in MSSQL.',
+        '▹ Developing single page application (SPA) using Angular, Responsive and user-friendly web design using HTML5, CSS3, Bootstrap, Material UI, and Web APIs integration.',
+        '▹ Fixing bugs in existing software and improved functionality.',
+        '▹ Implementation of API integration with backend technologies.',
+        '▹ Working with team members, Designing and developing the complete software architecture. ',
+        '▹ Working with database and creating Store Procedure, Views and Table Design in MSSQL.',
       ],
     },
     {
@@ -30,10 +30,10 @@ export class ExperienceComponent implements OnInit {
       Title: 'Independent',
       Date: 'July 2023 - Present',
       Description: [
-        'Implementing continuous improvements, working on frontend and backend.',
-        'Creating platforms with Angular, NodeJS, ExpressJS, MongoDB programmed with functional, reactive, and object-oriented programming paradigms.',
-        'Automation of processes with data structures.',
-        'Design layout with SASS, Bootstrap, Angular Material, etc.',
+        '▹ Implementing continuous improvements, working on frontend and backend.',
+        '▹ Creating platforms with Angular, NodeJS, ExpressJS, MongoDB programmed with functional, reactive, and object-oriented programming paradigms.',
+        '▹ Automation of processes with data structures.',
+        '▹ Design layout with SASS, Bootstrap, Angular Material, etc.',
       ],
     },
   ];
