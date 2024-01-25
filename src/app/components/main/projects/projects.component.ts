@@ -96,7 +96,7 @@ export class ProjectsComponent implements OnInit {
         'assets/images/mattable8.png',
       ],
       Technologies: ['Angular', 'Angular Material', 'NestJS', 'MySQL'],
-      ghLink: 'https://github.com/Mitesh47/nest-update-profile',
+      ghLink: 'https://github.com/Mitesh47/mat-table-crud',
     },
   ];
 
